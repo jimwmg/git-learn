@@ -12,6 +12,8 @@ module.exports = {extends: ['@commitlint/config-angular']};
 // };
 
 
+
+
 /*
 type 取值
 Must be one of the following:

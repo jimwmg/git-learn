@@ -1,3 +1,7 @@
 ss
+<<<<<<< HEAD
 
 test git flow release
+=======
+2.0
+>>>>>>> release/2.0

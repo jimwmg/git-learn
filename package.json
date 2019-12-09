@@ -1,6 +1,6 @@
 {
   "name": "git-lint-commit",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo pre",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "pre-commit": "echo pre"
     }
   },
   "keywords": [],

@@ -65,7 +65,53 @@ husky > commit-msg hook failed (add --no-verify to bypass)
 
 [config-conventional-github](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional#type-enum)
 
+### 5 自己配置校验规则
 
+5.1 新增commit-ling.js 文件，内容如下; 注意这里获取 commit 信息的路径，对于 husky ,是 `HUSKY_GIT_PARAMS` 这个变量，指向 `.git/COMMIT_EDITMSG`
+
+```
+cd .git
+ls 
+
+COMMIT_EDITMSG HEAD           TAG_EDITMSG    description    index          logs           refs
+FETCH_HEAD     ORIG_HEAD      config         hooks          info           objects
+
+```
+```javascript
+const chalk = require('chalk')
+const msgPath = process.env.HUSKY_GIT_PARAMS
+console.log('process.env',process.env.HUSKY_GIT_PARAMS)
+debugger;
+const msg = require('fs').readFileSync(msgPath, 'utf-8').trim()
+
+const commitRE = /^(revert: )?(feat|fix|polish|docs|style|refactor|perf|test|workflow|ci|chore|types|build)(\(.+\))?: .{1,50}/
+console.log(msg)
+console.log('process.env',process.env)
+if (!commitRE.test(msg)) {
+  console.log()
+  console.error(
+    `  ${chalk.bgRed.white(' ERROR ')} ${chalk.red(`invalid commit message format.`)}\n\n` +
+    chalk.red(`  Proper commit message format is required for automated changelog generation. Examples:\n\n`) +
+    `    ${chalk.green(`feat(compiler): add 'comments' option`)}\n` +
+    `    ${chalk.green(`fix(v-model): handle events on blur (close #28)`)}\n\n` +
+    chalk.red(`  See .github/COMMIT_CONVENTION.md for more details.\n`) +
+    chalk.red(`  You can also use ${chalk.cyan(`npm run commit`)} to interactively generate a commit message.\n`)
+  )
+  process.exit(1)
+}
+
+
+```
+
+package.json 中 githooks 中修改为如下：
+```json
+
+"husky": {
+    "hooks": {
+      "commit-msg": "node commit-lint.js"
+    }
+  },
+```
 
 Commit Message格式
 

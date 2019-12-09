@@ -8,7 +8,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo pre"
+      "pre-commit": "echo pre",
+      "commit-msg":"commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "keywords": [],

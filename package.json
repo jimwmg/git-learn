@@ -8,8 +8,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo $GIT_PARAMS",
-      "commit-msg":"commitlint -E HUSKY_GIT_PARAMS"
+      "pre-commit": "echo pre",
+      "commit-msg": "node commit-lint.js"
     }
   },
   "keywords": [],
@@ -19,5 +19,8 @@
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-angular": "^7.5.0",
     "husky": "^3.1.0"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0"
   }
 }

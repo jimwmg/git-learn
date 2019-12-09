@@ -1,6 +1,14 @@
 
 ### 使用 commitlint 步骤
 
+首先了解下业界比较认同的commit规范
+[angular提交规范-github](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
+
+[config-conventional-github](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional#type-enum)
+
+vue.js 也是这么做的[参见](https://github.com/vuejs/vue/commits/dev)
+
+
 #### 1 在项目根目录执行
 
 ```
@@ -51,7 +59,11 @@ husky > commit-msg hook failed (add --no-verify to bypass)
 
 可以使用 angular 提交规范，参考[commitlint-angular](https://www.npmjs.com/package/@commitlint/config-angular)
 
+
+
 [angular提交规范-github](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
+
+[config-conventional-github](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional#type-enum)
 
 
 

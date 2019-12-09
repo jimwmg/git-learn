@@ -1,5 +1,5 @@
 
-### 使用 commitlint 步骤
+## 使用 commitlint 步骤
 
 首先了解下业界比较认同的commit规范
 [angular提交规范-github](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
@@ -105,3 +105,9 @@ Body 部分是对本次 commit 的详细描述，可以分成多行
     * 使用第一人称现在时，比如使用change而不是changed或changes。
     * 应该说明代码变动的动机，以及与以前行为的对比。
 
+
+## 使用git-flow 规范工作流
+
+[git-flow官网](http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html)
+
+[git-flow使用教程](https://www.erichain.me/2016/03/22/2016-03-22-use-gitflow-to-automate-workflow/)

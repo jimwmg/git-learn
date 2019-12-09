@@ -8,13 +8,16 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo pre"
+      "pre-commit": "echo pre",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-angular": "^7.5.0",
     "husky": "^3.1.0"
   }
 }

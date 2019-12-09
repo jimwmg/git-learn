@@ -33,9 +33,26 @@ git commit -m"feat(commit-config): add commit"
 git commit -m'xxx'
 ```
 
+也不能写不符合规范的提交信息
+
+```
+git commit -m'testfafaf: fdfaf'
+husky > pre-commit (node v8.10.0)
+pre
+husky > commit-msg (node v8.10.0)
+⧗   input: testfafaf: fdfaf
+✖   type must be one of [build, ci, docs, feat, fix, perf, refactor, revert, style, test] [type-enum]
+
+✖   found 1 problems, 0 warnings
+ⓘ   Get help: https://github.com/conventional-changelog/commitlint/#what-is-commitlint
+
+husky > commit-msg hook failed (add --no-verify to bypass)
+```
+
 可以使用 angular 提交规范，参考[commitlint-angular](https://www.npmjs.com/package/@commitlint/config-angular)
 
 [angular提交规范-github](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
+
 
 
 Commit Message格式

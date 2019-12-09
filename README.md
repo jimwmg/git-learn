@@ -111,3 +111,6 @@ Body 部分是对本次 commit 的详细描述，可以分成多行
 [git-flow官网](http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html)
 
 [git-flow使用教程](https://www.erichain.me/2016/03/22/2016-03-22-use-gitflow-to-automate-workflow/)
+
+git-flow 可以大大的优化遵循git 分支规范的团队开发效率；
+
